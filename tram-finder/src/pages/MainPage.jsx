@@ -33,15 +33,15 @@ const MainPage = () => {
         onChange={e => setSearchTerm(e.target.value)}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {showRoima && (
-          <div className="bg-white p-4 rounded shadow text-left">
+          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow text-left transition-all duration-300">
             <h2 className="font-bold text-lg mb-2">Roima</h2>
             <TreeView data={roimaData} searchTerm={searchTerm} />
           </div>
         )}
         {showWinbus && (
-          <div className="bg-white p-4 rounded shadow text-left">
+          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow text-left transition-all duration-300">
             <h2 className="font-bold text-lg mb-2">Winbus</h2>
             <TreeView data={winbusData} searchTerm={searchTerm} />
           </div>
