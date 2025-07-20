@@ -9,8 +9,11 @@ const MainPage = () => {
   const [showSovelia, setShowSovelia] = useState(true);
 
   return (
-    <div className="p-6 text-center bg-gradient-to-b from-white to-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6">Raitiovaunun osahaku</h1>
+    <div
+      className="p-6 text-center min-h-screen bg-no-repeat bg-bottom bg-contain"
+      style={{ backgroundImage: "url('/bg.png')" }}
+    >
+      <h1 className="text-3xl font-bold mb-6">Skoda App</h1>
 
       {/* Кнопки переключения */}
       <div className="flex justify-center space-x-4 mb-4">
@@ -46,7 +49,7 @@ const MainPage = () => {
       {/* Три списка (Roima, Winbus, Sovelia) в одной линии */}
       <div className="flex flex-wrap justify-center gap-6">
         {showRoima && (
-          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-200 flex flex-col items-center">
             <h2 className="font-bold text-lg mb-4 text-center">Roima</h2>
             <div className="w-full text-left">
               <TreeView data={roimaData} searchTerm={searchTerm} />
@@ -55,7 +58,7 @@ const MainPage = () => {
         )}
 
         {showWinbus && (
-          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-200 flex flex-col items-center">
             <h2 className="font-bold text-lg mb-4 text-center">Winbus</h2>
             <div className="w-full text-left">
               <TreeView data={winbusData} searchTerm={searchTerm} />
@@ -64,7 +67,7 @@ const MainPage = () => {
         )}
 
         {showSovelia && (
-          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+          <div className="w-full md:w-1/2 lg:w-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-200 flex flex-col items-center">
             <h2 className="font-bold text-lg mb-4 text-center">Sovelia</h2>
             <div className="w-full text-left">
               <TreeView data={soveliaData} searchTerm={searchTerm} isSovelia />
