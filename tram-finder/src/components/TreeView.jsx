@@ -9,26 +9,22 @@ const TreeNode = ({ node, searchTerm, level = 0 }) => {
 
   const hasChildren = node.children && node.children.length > 0;
 
-  // Поиск совпадений внутри детей
   const hasMatchInChildren = hasChildren
     ? node.children.some(child =>
         JSON.stringify(child).toLowerCase().includes(lowerSearch)
       )
     : false;
 
-  // Раскрытие только при поиске
   useEffect(() => {
     if (lowerSearch) {
       setExpanded(matches || hasMatchInChildren);
     }
   }, [searchTerm]);
 
-  // Разрешить пользователю вручную открывать/закрывать
   const handleClick = () => {
     setExpanded(prev => !prev);
   };
 
-  // Подсветка
   const highlightStyle = matches
     ? "bg-blue-100 border-l-4 border-blue-500 pl-2"
     : "";
@@ -42,8 +38,23 @@ const TreeNode = ({ node, searchTerm, level = 0 }) => {
         {node.name}
       </div>
 
-      {node.code && (
+      {/* Классический текстовый код */}
+      {node.code && !node.url && (
         <div className="ml-6 text-sm text-gray-500">Code: {node.code}</div>
+      )}
+
+      {/* Sovelia-style: кликабельная ссылка */}
+      {node.url && (
+        <div className="ml-6 text-sm">
+          <a
+            href={node.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline hover:text-blue-700 break-all"
+          >
+            {node.url}
+          </a>
+        </div>
       )}
 
       {hasChildren && expanded && (
