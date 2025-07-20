@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import TreeView from "../components/TreeView";
-import { roimaData, winbusData } from "../data/data"; // адаптируй, если другой импорт
+import { roimaData, winbusData, soveliaData } from "../data/data"; // адаптируй, если другой импорт
 
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showRoima, setShowRoima] = useState(true);
   const [showWinbus, setShowWinbus] = useState(true);
+  const [showSovelia, setShowSovelia] = useState(true);
 
   return (
     <div className="p-6 text-center bg-gradient-to-b from-white to-gray-100 min-h-screen">
@@ -23,6 +24,12 @@ const MainPage = () => {
         >
           Winbus
         </button>
+        <button
+          onClick={() => setShowSovelia(prev => !prev)}
+          className={`px-4 py-2 rounded ${showSovelia ? "bg-blue-600 text-white" : "bg-white border"}`}
+        >
+          Sovelia
+        </button>
       </div>
 
       <input
@@ -35,15 +42,28 @@ const MainPage = () => {
 
       <div className="flex flex-wrap justify-center gap-6">
         {showRoima && (
-          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow text-left transition-all duration-300">
-            <h2 className="font-bold text-lg mb-2">Roima</h2>
-            <TreeView data={roimaData} searchTerm={searchTerm} />
+          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+            <h2 className="font-bold text-lg mb-4 text-center">Roima</h2>
+            <div className="w-full text-left">
+              <TreeView data={roimaData} searchTerm={searchTerm} />
+            </div>
           </div>
         )}
         {showWinbus && (
-          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow text-left transition-all duration-300">
-            <h2 className="font-bold text-lg mb-2">Winbus</h2>
-            <TreeView data={winbusData} searchTerm={searchTerm} />
+          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+            <h2 className="font-bold text-lg mb-4 text-center">Winbus</h2>
+            <div className="w-full text-left">
+              <TreeView data={winbusData} searchTerm={searchTerm} />
+            </div>
+          </div>
+
+        )}
+        {showSovelia && (
+          <div className="w-full lg:w-1/3 bg-white p-4 rounded-xl shadow flex flex-col items-center">
+            <h2 className="font-bold text-lg mb-4 text-center">Sovelia</h2>
+            <div className="w-full text-left">
+              <TreeView data={soveliaData} searchTerm={searchTerm} isSovelia />
+            </div>
           </div>
         )}
       </div>

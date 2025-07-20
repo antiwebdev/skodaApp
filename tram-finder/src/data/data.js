@@ -201,212 +201,232 @@ export const roimaData = [
     }
 ];
 export const winbusData =
-    [
-        {
-            name: "Moottorijärjestelmä",
-            children: [
-                {
-                    name: "Polttoainejärjestelmä",
-                    children: [
-                        { name: "Polttoainesuodatin", code: "WB-MO-001" },
-                        { name: "Polttoainepumppu", code: "WB-MO-002" },
-                        { name: "Ruiskutusjärjestelmä", code: "WB-MO-003" }
-                    ]
-                },
-                {
-                    name: "Pakokaasujärjestelmä",
-                    children: [
-                        { name: "Pakoputki", code: "WB-MO-010" },
-                        { name: "Hiukkassuodatin", code: "WB-MO-011" },
-                        { name: "Katalysaattori", code: "WB-MO-012" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Jäähdytysjärjestelmä",
-            children: [
-                {
-                    name: "Säiliöt ja letkut",
-                    children: [
-                        { name: "Jäähdytysnesteen säiliö", code: "WB-JAA-001" },
-                        { name: "Jäähdytysnesteen letku", code: "WB-JAA-002" }
-                    ]
-                },
-                {
-                    name: "Puhaltimet",
-                    children: [
-                        { name: "Sähköpuhallin", code: "WB-JAA-010" },
-                        { name: "Moottoripuhallin", code: "WB-JAA-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Sähköjärjestelmä",
-            children: [
-                {
-                    name: "Akut",
-                    children: [
-                        { name: "Pääakku 24V", code: "WB-EL-001" },
-                        { name: "Lisäakku 12V", code: "WB-EL-002" }
-                    ]
-                },
-                {
-                    name: "Valaistus",
-                    children: [
-                        { name: "Ajovalot", code: "WB-EL-010" },
-                        { name: "Sumuvalot", code: "WB-EL-011" },
-                        { name: "Sisävalot", code: "WB-EL-012" }
-                    ]
-                },
-                {
-                    name: "Elektroniikkayksiköt",
-                    children: [
-                        { name: "Ohjausyksikkö", code: "WB-EL-100" },
-                        { name: "Diagnostiikkayksikkö", code: "WB-EL-101" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ohjausjärjestelmä",
-            children: [
-                {
-                    name: "Ohjauspyörä",
-                    children: [
-                        { name: "Ohjauspyörä, vakio", code: "WB-OH-001" },
-                        { name: "Ohjauspyörä, ergonominen", code: "WB-OH-002" }
-                    ]
-                },
-                {
-                    name: "Polkimet",
-                    children: [
-                        { name: "Kaasupoljin", code: "WB-OH-010" },
-                        { name: "Jarrupoljin", code: "WB-OH-011" }
-                    ]
-                },
-                {
-                    name: "Näytöt",
-                    children: [
-                        { name: "Kuljettajan näyttö", code: "WB-OH-100" },
-                        { name: "Matkustajan näyttö", code: "WB-OH-101" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Alusta ja jousitus",
-            children: [
-                {
-                    name: "Pyörät",
-                    children: [
-                        { name: "Etupyörät", code: "WB-ALU-001" },
-                        { name: "Takapyörät", code: "WB-ALU-002" }
-                    ]
-                },
-                {
-                    name: "Jousitusjärjestelmä",
-                    children: [
-                        { name: "Ilmajousitus", code: "WB-ALU-010" },
-                        { name: "Vakaajatangot", code: "WB-ALU-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Turvajärjestelmät",
-            children: [
-                {
-                    name: "Hätäjärjestelmät",
-                    children: [
-                        { name: "Hätäjarrutusjärjestelmä", code: "WB-SEC-001" },
-                        { name: "Palohälytin", code: "WB-SEC-002" }
-                    ]
-                },
-                {
-                    name: "Valvontajärjestelmät",
-                    children: [
-                        { name: "Kameravalvonta", code: "WB-SEC-010" },
-                        { name: "Liiketunnistin", code: "WB-SEC-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ovet ja portit",
-            children: [
-                {
-                    name: "Ovien mekanismit",
-                    children: [
-                        { name: "Liukuovi", code: "WB-DO-001" },
-                        { name: "Kääntöovi", code: "WB-DO-002" }
-                    ]
-                },
-                {
-                    name: "Turvalukot",
-                    children: [
-                        { name: "Sähkölukko", code: "WB-DO-010" },
-                        { name: "Manuaalinen lukko", code: "WB-DO-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ilmastointi ja lämmitys",
-            children: [
-                {
-                    name: "Lämmitysjärjestelmä",
-                    children: [
-                        { name: "Lämmityselementti", code: "WB-AC-001" },
-                        { name: "Lämmityspuhallin", code: "WB-AC-002" }
-                    ]
-                },
-                {
-                    name: "Jäähdytysjärjestelmä",
-                    children: [
-                        { name: "Ilmastointilaite", code: "WB-AC-010" },
-                        { name: "Kylmäainejärjestelmä", code: "WB-AC-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Runko ja kiinnitykset",
-            children: [
-                {
-                    name: "Runkorakenteet",
-                    children: [
-                        { name: "Runkopalkki", code: "WB-RUN-001" },
-                        { name: "Kiinnityspultit", code: "WB-RUN-002" }
-                    ]
-                },
-                {
-                    name: "Iskunvaimentimet",
-                    children: [
-                        { name: "Etujousitus", code: "WB-RUN-010" },
-                        { name: "Takajousitus", code: "WB-RUN-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Kommunikaatiojärjestelmät",
-            children: [
-                {
-                    name: "Radio ja signaalit",
-                    children: [
-                        { name: "VHF-radio", code: "WB-COM-001" },
-                        { name: "LED-merkkivalot", code: "WB-COM-002" }
-                    ]
-                },
-                {
-                    name: "Verkkolaitteet",
-                    children: [
-                        { name: "WiFi-reititin", code: "WB-COM-010" },
-                        { name: "Bluetooth-moduuli", code: "WB-COM-011" }
-                    ]
-                }
-            ]
-        }
-    ];
+[
+    {
+        name: "Moottorijärjestelmä",
+        children: [
+            {
+                name: "Polttoainejärjestelmä",
+                children: [
+                    { name: "Polttoainesuodatin", code: "WB-MO-001" },
+                    { name: "Polttoainepumppu", code: "WB-MO-002" },
+                    { name: "Ruiskutusjärjestelmä", code: "WB-MO-003" }
+                ]
+            },
+            {
+                name: "Pakokaasujärjestelmä",
+                children: [
+                    { name: "Pakoputki", code: "WB-MO-010" },
+                    { name: "Hiukkassuodatin", code: "WB-MO-011" },
+                    { name: "Katalysaattori", code: "WB-MO-012" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Jäähdytysjärjestelmä",
+        children: [
+            {
+                name: "Säiliöt ja letkut",
+                children: [
+                    { name: "Jäähdytysnesteen säiliö", code: "WB-JAA-001" },
+                    { name: "Jäähdytysnesteen letku", code: "WB-JAA-002" }
+                ]
+            },
+            {
+                name: "Puhaltimet",
+                children: [
+                    { name: "Sähköpuhallin", code: "WB-JAA-010" },
+                    { name: "Moottoripuhallin", code: "WB-JAA-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Sähköjärjestelmä",
+        children: [
+            {
+                name: "Akut",
+                children: [
+                    { name: "Pääakku 24V", code: "WB-EL-001" },
+                    { name: "Lisäakku 12V", code: "WB-EL-002" }
+                ]
+            },
+            {
+                name: "Valaistus",
+                children: [
+                    { name: "Ajovalot", code: "WB-EL-010" },
+                    { name: "Sumuvalot", code: "WB-EL-011" },
+                    { name: "Sisävalot", code: "WB-EL-012" }
+                ]
+            },
+            {
+                name: "Elektroniikkayksiköt",
+                children: [
+                    { name: "Ohjausyksikkö", code: "WB-EL-100" },
+                    { name: "Diagnostiikkayksikkö", code: "WB-EL-101" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ohjausjärjestelmä",
+        children: [
+            {
+                name: "Ohjauspyörä",
+                children: [
+                    { name: "Ohjauspyörä, vakio", code: "WB-OH-001" },
+                    { name: "Ohjauspyörä, ergonominen", code: "WB-OH-002" }
+                ]
+            },
+            {
+                name: "Polkimet",
+                children: [
+                    { name: "Kaasupoljin", code: "WB-OH-010" },
+                    { name: "Jarrupoljin", code: "WB-OH-011" }
+                ]
+            },
+            {
+                name: "Näytöt",
+                children: [
+                    { name: "Kuljettajan näyttö", code: "WB-OH-100" },
+                    { name: "Matkustajan näyttö", code: "WB-OH-101" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Alusta ja jousitus",
+        children: [
+            {
+                name: "Pyörät",
+                children: [
+                    { name: "Etupyörät", code: "WB-ALU-001" },
+                    { name: "Takapyörät", code: "WB-ALU-002" }
+                ]
+            },
+            {
+                name: "Jousitusjärjestelmä",
+                children: [
+                    { name: "Ilmajousitus", code: "WB-ALU-010" },
+                    { name: "Vakaajatangot", code: "WB-ALU-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Turvajärjestelmät",
+        children: [
+            {
+                name: "Hätäjärjestelmät",
+                children: [
+                    { name: "Hätäjarrutusjärjestelmä", code: "WB-SEC-001" },
+                    { name: "Palohälytin", code: "WB-SEC-002" }
+                ]
+            },
+            {
+                name: "Valvontajärjestelmät",
+                children: [
+                    { name: "Kameravalvonta", code: "WB-SEC-010" },
+                    { name: "Liiketunnistin", code: "WB-SEC-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ovet ja portit",
+        children: [
+            {
+                name: "Ovien mekanismit",
+                children: [
+                    { name: "Liukuovi", code: "WB-DO-001" },
+                    { name: "Kääntöovi", code: "WB-DO-002" }
+                ]
+            },
+            {
+                name: "Turvalukot",
+                children: [
+                    { name: "Sähkölukko", code: "WB-DO-010" },
+                    { name: "Manuaalinen lukko", code: "WB-DO-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ilmastointi ja lämmitys",
+        children: [
+            {
+                name: "Lämmitysjärjestelmä",
+                children: [
+                    { name: "Lämmityselementti", code: "WB-AC-001" },
+                    { name: "Lämmityspuhallin", code: "WB-AC-002" }
+                ]
+            },
+            {
+                name: "Jäähdytysjärjestelmä",
+                children: [
+                    { name: "Ilmastointilaite", code: "WB-AC-010" },
+                    { name: "Kylmäainejärjestelmä", code: "WB-AC-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Runko ja kiinnitykset",
+        children: [
+            {
+                name: "Runkorakenteet",
+                children: [
+                    { name: "Runkopalkki", code: "WB-RUN-001" },
+                    { name: "Kiinnityspultit", code: "WB-RUN-002" }
+                ]
+            },
+            {
+                name: "Iskunvaimentimet",
+                children: [
+                    { name: "Etujousitus", code: "WB-RUN-010" },
+                    { name: "Takajousitus", code: "WB-RUN-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Kommunikaatiojärjestelmät",
+        children: [
+            {
+                name: "Radio ja signaalit",
+                children: [
+                    { name: "VHF-radio", code: "WB-COM-001" },
+                    { name: "LED-merkkivalot", code: "WB-COM-002" }
+                ]
+            },
+            {
+                name: "Verkkolaitteet",
+                children: [
+                    { name: "WiFi-reititin", code: "WB-COM-010" },
+                    { name: "Bluetooth-moduuli", code: "WB-COM-011" }
+                ]
+            }
+        ]
+    }
+];
+
+export const soveliaData = [
+    {
+        name: "Ohjaamo",
+        code: "https://example.com/docs/ohjaamo"
+    },
+    {
+        name: "Ovenhallinta",
+        children: [
+            {
+                name: "Etuovi",
+                code: "https://example.com/docs/etuovi"
+            },
+            {
+                name: "Takaovi",
+                code: "https://example.com/docs/takaovi"
+            }
+        ]
+    }
+];
