@@ -1,207 +1,207 @@
-const data = {
-    roima: [
-        {
-            name: "Jarrujärjestelmä",
-            children: [
-                {
-                    name: "Jarrupalat",
-                    children: [
-                        { name: "Etupalat", code: "RO-JAR-001" },
-                        { name: "Takapalat", code: "RO-JAR-002" },
-                        { name: "Käsijarrupalat", code: "RO-JAR-003" }
-                    ]
-                },
-                {
-                    name: "Kiskojarru",
-                    children: [
-                        { name: "Jarrumoduuli A", code: "RO-JAR-010" },
-                        { name: "Jarrumoduuli B", code: "RO-JAR-011" },
-                        { name: "Ohjausventtiili", code: "RO-JAR-012" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Sähköjärjestelmä",
-            children: [
-                {
-                    name: "Virtalähteet",
-                    children: [
-                        { name: "Akkupaketti 24V", code: "RO-EL-001" },
-                        { name: "Invertteri 400V", code: "RO-EL-002" },
-                        { name: "DC/DC-muunnin", code: "RO-EL-003" }
-                    ]
-                },
-                {
-                    name: "Johdotus",
-                    children: [
-                        { name: "Pääkytkinkaapeli", code: "RO-EL-010" },
-                        { name: "Ohjauskaapeli", code: "RO-EL-011" },
-                        { name: "Maadoitusjohto", code: "RO-EL-012" }
-                    ]
-                },
-                {
-                    name: "Anturit",
-                    children: [
-                        { name: "Nopeusanturi", code: "RO-EL-101" },
-                        { name: "Lämpötila-anturi", code: "RO-EL-102" },
-                        { name: "Paikka-anturi", code: "RO-EL-103" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ovenhallinta",
-            children: [
-                {
-                    name: "Oven moottorit",
-                    children: [
-                        { name: "Etuoven moottori", code: "RO-DO-001" },
-                        { name: "Takaoven moottori", code: "RO-DO-002" }
-                    ]
-                },
-                {
-                    name: "Tunnistimet",
-                    children: [
-                        { name: "Kynnyksen tunnistin", code: "RO-DO-010" },
-                        { name: "Lukitustunnistin", code: "RO-DO-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ohjaamo",
-            children: [
-                {
-                    name: "Ohjauslaitteet",
-                    children: [
-                        { name: "Ajopoljin", code: "RO-OH-001" },
-                        { name: "Jarrupoljin", code: "RO-OH-002" },
-                        { name: "Ohjausvipu", code: "RO-OH-003" }
-                    ]
-                },
-                {
-                    name: "Näyttöjärjestelmä",
-                    children: [
-                        { name: "Päänäyttö", code: "RO-OH-010" },
-                        { name: "Sivunäyttö", code: "RO-OH-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Ilmastointi",
-            children: [
-                {
-                    name: "Lämmitys",
-                    children: [
-                        { name: "Lämmitysyksikkö etu", code: "RO-AC-001" },
-                        { name: "Lämmitysyksikkö taka", code: "RO-AC-002" }
-                    ]
-                },
-                {
-                    name: "Jäähdytys",
-                    children: [
-                        { name: "Kattolaite A", code: "RO-AC-010" },
-                        { name: "Kattolaite B", code: "RO-AC-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Tiedonsiirto",
-            children: [
-                {
-                    name: "Moduulit",
-                    children: [
-                        { name: "CAN-moduuli", code: "RO-COM-001" },
-                        { name: "Ethernet-kytkin", code: "RO-COM-002" }
-                    ]
-                },
-                {
-                    name: "Antennit",
-                    children: [
-                        { name: "GPS-antenni", code: "RO-COM-010" },
-                        { name: "WiFi-antenni", code: "RO-COM-011" },
-                        { name: "LTE-antenni", code: "RO-COM-012" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Runko",
-            children: [
-                {
-                    name: "Kiinnitykset",
-                    children: [
-                        { name: "Rungon pultti", code: "RO-RUN-001" },
-                        { name: "Rungon kiinnike", code: "RO-RUN-002" },
-                        { name: "Tärinänvaimennin", code: "RO-RUN-003" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Alusta",
-            children: [
-                {
-                    name: "Pyörät",
-                    children: [
-                        { name: "Etupyörä", code: "RO-ALU-001" },
-                        { name: "Takapyörä", code: "RO-ALU-002" }
-                    ]
-                },
-                {
-                    name: "Ripustus",
-                    children: [
-                        { name: "Jousielementti", code: "RO-ALU-010" },
-                        { name: "Vaimentaja", code: "RO-ALU-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Valojärjestelmä",
-            children: [
-                {
-                    name: "Ulkovalot",
-                    children: [
-                        { name: "Ajovalo", code: "RO-VAL-001" },
-                        { name: "Jarruvalo", code: "RO-VAL-002" },
-                        { name: "Vilkkuyksikkö", code: "RO-VAL-003" }
-                    ]
-                },
-                {
-                    name: "Sisävalot",
-                    children: [
-                        { name: "Kattoledit", code: "RO-VAL-010" },
-                        { name: "Lukulamppu", code: "RO-VAL-011" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Turvajärjestelmät",
-            children: [
-                {
-                    name: "Kamera- ja tallennus",
-                    children: [
-                        { name: "Etukamera", code: "RO-SEC-001" },
-                        { name: "Sivukamera", code: "RO-SEC-002" },
-                        { name: "Tallennusyksikkö", code: "RO-SEC-003" }
-                    ]
-                },
-                {
-                    name: "Hätäjärjestelmät",
-                    children: [
-                        { name: "Hätävalo", code: "RO-SEC-010" },
-                        { name: "Hätäjarrukahva", code: "RO-SEC-011" }
-                    ]
-                }
-            ]
-        }
-    ],
-    winbus: [
+export const roimaData = [
+    {
+        name: "Jarrujärjestelmä",
+        children: [
+            {
+                name: "Jarrupalat",
+                children: [
+                    { name: "Etupalat", code: "RO-JAR-001" },
+                    { name: "Takapalat", code: "RO-JAR-002" },
+                    { name: "Käsijarrupalat", code: "RO-JAR-003" }
+                ]
+            },
+            {
+                name: "Kiskojarru",
+                children: [
+                    { name: "Jarrumoduuli A", code: "RO-JAR-010" },
+                    { name: "Jarrumoduuli B", code: "RO-JAR-011" },
+                    { name: "Ohjausventtiili", code: "RO-JAR-012" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Sähköjärjestelmä",
+        children: [
+            {
+                name: "Virtalähteet",
+                children: [
+                    { name: "Akkupaketti 24V", code: "RO-EL-001" },
+                    { name: "Invertteri 400V", code: "RO-EL-002" },
+                    { name: "DC/DC-muunnin", code: "RO-EL-003" }
+                ]
+            },
+            {
+                name: "Johdotus",
+                children: [
+                    { name: "Pääkytkinkaapeli", code: "RO-EL-010" },
+                    { name: "Ohjauskaapeli", code: "RO-EL-011" },
+                    { name: "Maadoitusjohto", code: "RO-EL-012" }
+                ]
+            },
+            {
+                name: "Anturit",
+                children: [
+                    { name: "Nopeusanturi", code: "RO-EL-101" },
+                    { name: "Lämpötila-anturi", code: "RO-EL-102" },
+                    { name: "Paikka-anturi", code: "RO-EL-103" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ovenhallinta",
+        children: [
+            {
+                name: "Oven moottorit",
+                children: [
+                    { name: "Etuoven moottori", code: "RO-DO-001" },
+                    { name: "Takaoven moottori", code: "RO-DO-002" }
+                ]
+            },
+            {
+                name: "Tunnistimet",
+                children: [
+                    { name: "Kynnyksen tunnistin", code: "RO-DO-010" },
+                    { name: "Lukitustunnistin", code: "RO-DO-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ohjaamo",
+        children: [
+            {
+                name: "Ohjauslaitteet",
+                children: [
+                    { name: "Ajopoljin", code: "RO-OH-001" },
+                    { name: "Jarrupoljin", code: "RO-OH-002" },
+                    { name: "Ohjausvipu", code: "RO-OH-003" }
+                ]
+            },
+            {
+                name: "Näyttöjärjestelmä",
+                children: [
+                    { name: "Päänäyttö", code: "RO-OH-010" },
+                    { name: "Sivunäyttö", code: "RO-OH-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Ilmastointi",
+        children: [
+            {
+                name: "Lämmitys",
+                children: [
+                    { name: "Lämmitysyksikkö etu", code: "RO-AC-001" },
+                    { name: "Lämmitysyksikkö taka", code: "RO-AC-002" }
+                ]
+            },
+            {
+                name: "Jäähdytys",
+                children: [
+                    { name: "Kattolaite A", code: "RO-AC-010" },
+                    { name: "Kattolaite B", code: "RO-AC-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Tiedonsiirto",
+        children: [
+            {
+                name: "Moduulit",
+                children: [
+                    { name: "CAN-moduuli", code: "RO-COM-001" },
+                    { name: "Ethernet-kytkin", code: "RO-COM-002" }
+                ]
+            },
+            {
+                name: "Antennit",
+                children: [
+                    { name: "GPS-antenni", code: "RO-COM-010" },
+                    { name: "WiFi-antenni", code: "RO-COM-011" },
+                    { name: "LTE-antenni", code: "RO-COM-012" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Runko",
+        children: [
+            {
+                name: "Kiinnitykset",
+                children: [
+                    { name: "Rungon pultti", code: "RO-RUN-001" },
+                    { name: "Rungon kiinnike", code: "RO-RUN-002" },
+                    { name: "Tärinänvaimennin", code: "RO-RUN-003" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Alusta",
+        children: [
+            {
+                name: "Pyörät",
+                children: [
+                    { name: "Etupyörä", code: "RO-ALU-001" },
+                    { name: "Takapyörä", code: "RO-ALU-002" }
+                ]
+            },
+            {
+                name: "Ripustus",
+                children: [
+                    { name: "Jousielementti", code: "RO-ALU-010" },
+                    { name: "Vaimentaja", code: "RO-ALU-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Valojärjestelmä",
+        children: [
+            {
+                name: "Ulkovalot",
+                children: [
+                    { name: "Ajovalo", code: "RO-VAL-001" },
+                    { name: "Jarruvalo", code: "RO-VAL-002" },
+                    { name: "Vilkkuyksikkö", code: "RO-VAL-003" }
+                ]
+            },
+            {
+                name: "Sisävalot",
+                children: [
+                    { name: "Kattoledit", code: "RO-VAL-010" },
+                    { name: "Lukulamppu", code: "RO-VAL-011" }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Turvajärjestelmät",
+        children: [
+            {
+                name: "Kamera- ja tallennus",
+                children: [
+                    { name: "Etukamera", code: "RO-SEC-001" },
+                    { name: "Sivukamera", code: "RO-SEC-002" },
+                    { name: "Tallennusyksikkö", code: "RO-SEC-003" }
+                ]
+            },
+            {
+                name: "Hätäjärjestelmät",
+                children: [
+                    { name: "Hätävalo", code: "RO-SEC-010" },
+                    { name: "Hätäjarrukahva", code: "RO-SEC-011" }
+                ]
+            }
+        ]
+    }
+];
+export const winbusData =
+    [
         {
             name: "Moottorijärjestelmä",
             children: [
@@ -409,7 +409,4 @@ const data = {
                 }
             ]
         }
-    ]
-};
-
-export default data;
+    ];
